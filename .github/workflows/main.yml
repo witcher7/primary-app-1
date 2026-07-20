@@ -1,15 +1,17 @@
 name: CI-Testing
-on: push
+on: workflow_dispatch
 jobs:
   first-job:
      runs-on: ubuntu-latest
-     steps:  
-        - name: Before using actions checkout we dont have any files 
-          run: ls
-        - name: Use the github prewritten code to pull your data from your repo 
-          uses: actions/checkout@v5
-        - name: let's check the files 
-          run: ls 
+     steps: 
+         - name: pulling up the code  
+           uses: actions/checkout@v6
+
+         - name: Set Up Node 
+           uses: actions/setup-node@v4
+
+         - name: Run the nodejs   
+           run: npm start
 
         # uses is used to use our github pre written actions/ use the plugins 
         # run command is used to run your linux command 
