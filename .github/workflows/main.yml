@@ -4,7 +4,10 @@ jobs:
   first-job:
      runs-on: ubuntu-latest
      steps:  
-        - name: Print Anish name
-          run: echo "ANISH"
-        - name: check the file background
+        - name: Use the github prewritten code to pull your data from your repo 
+          uses: actions/checkout@v5
+        - name: let's check the files 
           run: ls 
+
+        # uses is used to use our github pre written actions/ use the plugins 
+        # run command is used to run your linux command 
