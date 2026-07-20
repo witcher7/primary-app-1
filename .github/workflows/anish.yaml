@@ -1,7 +1,7 @@
 name: anish-pipeline
 on: push
 jobs:
-  first job:
+  first-job:
     runs-on: ubuntu-22.04
     steps:
       - name: print thinkcloudly
