@@ -4,6 +4,8 @@ jobs:
   first-job:
      runs-on: ubuntu-latest
      steps:  
+        - name: Before using actions checkout we dont have any files 
+          run: ls
         - name: Use the github prewritten code to pull your data from your repo 
           uses: actions/checkout@v5
         - name: let's check the files 
