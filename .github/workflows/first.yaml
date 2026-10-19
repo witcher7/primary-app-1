@@ -1,1 +1,11 @@
-
+name: Introduction
+on: push
+jobs:
+  intro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout karo Code ko
+        uses: actions/checkout@v6.1.0
+        
+      - name: file check karte hai  
+        run: ls 
