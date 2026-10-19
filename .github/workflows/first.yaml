@@ -1,5 +1,6 @@
 name: Introduction
-on: workflow_dispatch
+on: 
+  - push
 jobs:
   intro:
     runs-on: ubuntu-latest
