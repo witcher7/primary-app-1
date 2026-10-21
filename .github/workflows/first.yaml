@@ -4,9 +4,17 @@ on:
 jobs:
   intro:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16,18,20,24]
     steps:
       - name: Checkout karo Code ko
         uses: actions/checkout@v6.1.0
         
-      - name: file check karte hai  
-        run: ls 
+      - name: Use NodeJS Actions  
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node}}
+      - name: Check Node Version 
+        run: node -v 
+     
