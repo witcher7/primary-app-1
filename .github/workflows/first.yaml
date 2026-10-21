@@ -30,7 +30,10 @@ jobs:
           push: true
           tags: rg7121/killer-app:latest
 
-
+      - name: Image Scanning
+        uses: aquasecurity/trivy-action@v0.36
+        with: 
+            image-ref: rg7121/killer-app:latest
 
 
 
