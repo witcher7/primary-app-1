@@ -18,3 +18,12 @@ jobs:
       - name: Check Node Version 
         run: node -v 
      
+      - name: Docker build
+        run: docker build -t myapp:latest . 
+      - name: docker image check 
+        run: docker images 
+
+
+
+
+
